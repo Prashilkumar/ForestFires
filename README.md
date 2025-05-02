@@ -1,3 +1,4 @@
+
 # 🔥 Algerian Forest Fires Prediction using Ridge Regression
 
 ## 📌 Project Overview
@@ -32,7 +33,7 @@ The dataset comprises **244 records** collected between **June and September 201
 
 ### ✅ Steps Followed:
 - **Exploratory Data Analysis (EDA)**: Uncovered feature distributions, correlations, and region-specific patterns.
-- **Feature Engineering**: Transformed raw features and removed the Date feature as it was not relevant for predicting FWI.
+- **Feature Engineering**: Transformed raw features and **removed the `Date` feature** as it was not relevant for predicting FWI.
 - **Feature Selection**: Used statistical techniques and correlation analysis to retain only impactful predictors.
 - **Model Training**: Employed Ridge Regression to handle multicollinearity and prevent overfitting.
 - **Model Evaluation**: Assessed performance using metrics such as MAE, RMSE, and R² score.
@@ -63,3 +64,68 @@ algerian-forest-fire/
 ├── venv/                   # Virtual environment with dependencies
 ├── README.md               # Project documentation
 └── .gitignore              # To ignore unnecessary files
+```
+
+---
+
+## 🖥️ Web Application
+
+A simple **Flask web app** is developed where users can input features like temperature, wind speed, humidity, etc., and receive the predicted **FWI** value using the trained Ridge model.
+
+### 🔗 Running the Web App:
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/algerian-forest-fire.git
+   cd algerian-forest-fire
+   ```
+
+2. (Optional) Activate virtual environment:
+   ```bash
+   source venv/bin/activate
+   ```
+
+3. Install required packages:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. Run the Flask app:
+   ```bash
+   python app/app.py
+   ```
+
+5. Open the browser and go to:
+   ```
+   http://127.0.0.1:5000
+   ```
+
+---
+
+## 🧪 Model Performance
+
+| Metric       | Value        |
+|--------------|--------------|
+| MAE          | 0.564        |
+| R² Score     | 0.984        |
+
+*(Exact values depend on training output in notebook)*
+
+---
+
+## 📚 Dependencies
+
+All dependencies are listed in `requirements.txt`. Key libraries include:
+- `pandas`
+- `numpy`
+- `scikit-learn`
+- `matplotlib`
+- `seaborn`
+- `flask`
+- `joblib`
+
+---
+
+## 📌 Conclusion
+
+A robust predictive system for Algerian forest fire conditions using Ridge Regression was created, evaluated, and deployed via a web interface for real-world interaction.
