@@ -36,7 +36,7 @@ The dataset comprises **244 records** collected between **June and September 201
 - **Feature Engineering**: Transformed raw features and **removed the `Date` feature** as it was not relevant for predicting FWI.
 - **Feature Selection**: Used statistical techniques and correlation analysis to retain only impactful predictors.
 - **Model Training**: Employed Ridge Regression to handle multicollinearity and prevent overfitting.
-- **Model Evaluation**: Assessed performance using metrics such as MAE, RMSE, and R² score.
+- **Model Evaluation**: Assessed performance using metrics such as MAE, R² score.
 
 ---
 
@@ -53,7 +53,6 @@ algerian-forest-fire/
 │   └── forest_fire_model.ipynb   # Full analysis, EDA, training, evaluation
 │
 ├── templates/
-│       └── home.html      # Default Home Page
 │       └── index.html      # Frontend for user interactionapp/
 │
 ├── dataset/
@@ -77,8 +76,9 @@ A simple **Flask web app** is developed where users can input features like temp
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/algerian-forest-fire.git
-   cd algerian-forest-fire
+   git clone https://github.com/Prashilkumar/ForestFires.git
+   cd ForestFires
+
    ```
 
 2. (Optional) Activate virtual environment:
@@ -98,6 +98,7 @@ A simple **Flask web app** is developed where users can input features like temp
 
 5. Open the browser and go to:
    ```
+   http://127.0.0.1:5000/
    http://127.0.0.1:5000/predictdata
    ```
 

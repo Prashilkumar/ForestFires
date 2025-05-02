@@ -2,7 +2,7 @@ import pickle
 import numpy as np
 import pandas as pd
 from sklearn.preprocessing import StandardScaler
-from flask import Flask,request,jsonify,render_template
+from flask import Flask,request,jsonify,render_template,redirect,url_for
 
 
 application = Flask(__name__)
@@ -17,7 +17,7 @@ standard_scaler = pickle.load(open('models/scaler.pkl','rb'))
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return redirect(url_for('predict_datapoint'))
 
 @app.route('/predictdata',methods=['GET','POST'])
 def predict_datapoint():
