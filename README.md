@@ -1,0 +1,65 @@
+# 🔥 Algerian Forest Fires Prediction using Ridge Regression
+
+## 📌 Project Overview
+
+This project aims to **predict the Fire Weather Index (FWI)** — a numerical rating of fire intensity — using meteorological and weather-related attributes from two Algerian regions: **Bejaia** and **Sidi Bel-Abbes**. By leveraging Ridge Regression, the model forecasts FWI based on temperature, humidity, wind, and other fire behavior indicators.
+
+---
+
+## 📊 Dataset Description
+
+The dataset comprises **244 records** collected between **June and September 2012**, with **122 records** from each region.
+
+- **Target Variable**: `FWI` (Fire Weather Index)
+- **Features**:
+  1. `Date`: Date of observation (DD/MM/YYYY)
+  2. `Temp`: Temperature at noon (°C)
+  3. `RH`: Relative Humidity (%)
+  4. `Ws`: Wind speed (km/h)
+  5. `Rain`: Daily rain total (mm)
+  6. `FFMC`: Fine Fuel Moisture Code
+  7. `DMC`: Duff Moisture Code
+  8. `DC`: Drought Code
+  9. `ISI`: Initial Spread Index
+  10. `BUI`: Buildup Index
+  11. `FWI`: Fire Weather Index (target)
+
+> Note: The `classes` column (fire / not fire) is used in original classification problems but **is not** the focus here — we are solving a **regression problem** to predict FWI.
+
+---
+
+## 🧠 Machine Learning Approach
+
+### ✅ Steps Followed:
+- **Exploratory Data Analysis (EDA)**: Uncovered feature distributions, correlations, and region-specific patterns.
+- **Feature Engineering**: Transformed raw features and removed the Date feature as it was not relevant for predicting FWI.
+- **Feature Selection**: Used statistical techniques and correlation analysis to retain only impactful predictors.
+- **Model Training**: Employed Ridge Regression to handle multicollinearity and prevent overfitting.
+- **Model Evaluation**: Assessed performance using metrics such as MAE, RMSE, and R² score.
+
+---
+
+## 🗂️ Project Structure
+
+```bash
+algerian-forest-fire/
+│
+├── models/
+│   ├── scaler.pkl          # StandardScaler object used for input data
+│   └── ridge.pkl           # Pickled Ridge Regression trained model
+│
+├── notebooks/
+│   └── forest_fire_model.ipynb   # Full analysis, EDA, training, evaluation
+│
+├── app/
+│   └── app.py              # Flask web app to test model predictions
+│   └── templates/
+│       └── index.html      # Frontend for user interaction
+│
+├── dataset/
+│   └── Algerian_fires.csv  # Input dataset used in the project
+│
+├── requirements.txt        # All required libraries and versions
+├── venv/                   # Virtual environment with dependencies
+├── README.md               # Project documentation
+└── .gitignore              # To ignore unnecessary files
