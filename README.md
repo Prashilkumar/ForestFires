@@ -52,14 +52,15 @@ algerian-forest-fire/
 ├── notebooks/
 │   └── forest_fire_model.ipynb   # Full analysis, EDA, training, evaluation
 │
-├── app/
-│   └── app.py              # Flask web app to test model predictions
-│   └── templates/
-│       └── index.html      # Frontend for user interaction
+├── templates/
+│       └── home.html      # Default Home Page
+│       └── index.html      # Frontend for user interactionapp/
 │
 ├── dataset/
-│   └── Algerian_fires.csv  # Input dataset used in the project
+│   └── Algerian_forest_fires_dataset_UPDATE.csv  # Input dataset used in the project
 │
+│
+├── application.py
 ├── requirements.txt        # All required libraries and versions
 ├── venv/                   # Virtual environment with dependencies
 ├── README.md               # Project documentation
@@ -92,12 +93,12 @@ A simple **Flask web app** is developed where users can input features like temp
 
 4. Run the Flask app:
    ```bash
-   python app/app.py
+   python application.py
    ```
 
 5. Open the browser and go to:
    ```
-   http://127.0.0.1:5000
+   http://127.0.0.1:5000/predictdata
    ```
 
 ---
@@ -110,19 +111,6 @@ A simple **Flask web app** is developed where users can input features like temp
 | R² Score     | 0.984        |
 
 *(Exact values depend on training output in notebook)*
-
----
-
-## 📚 Dependencies
-
-All dependencies are listed in `requirements.txt`. Key libraries include:
-- `pandas`
-- `numpy`
-- `scikit-learn`
-- `matplotlib`
-- `seaborn`
-- `flask`
-- `joblib`
 
 ---
 
