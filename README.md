@@ -61,7 +61,6 @@ algerian-forest-fire/
 │
 ├── application.py
 ├── requirements.txt        # All required libraries and versions
-├── venv/                   # Virtual environment with dependencies
 ├── README.md               # Project documentation
 └── .gitignore              # To ignore unnecessary files
 ```
@@ -79,11 +78,6 @@ A simple **Flask web app** is developed where users can input features like temp
    git clone https://github.com/Prashilkumar/ForestFires.git
    cd ForestFires
 
-   ```
-
-2. (Optional) Activate virtual environment:
-   ```bash
-   source venv/bin/activate
    ```
 
 3. Install required packages:
